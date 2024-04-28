@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import { storeCarData } from "../helpers/helpers.js"
 
 export const generateBmwData = (): CarsData => {
   const generatedCarData: CarsData = {
@@ -11,6 +12,7 @@ export const generateBmwData = (): CarsData => {
     price: faker.number.int({ min: 1000, max: 100000 }),
     dateAdded: faker.number.int({ min: new Date().getFullYear() - 5, max: new Date().getFullYear() })
   };
+  storeCarData(generatedCarData).catch(console.error);
 
   return generatedCarData;
 };
@@ -27,6 +29,7 @@ export const generateToyotaData = (): CarsData => {
     price: faker.number.int({ min: 1000, max: 100000 }),
     dateAdded: faker.number.int({ min: new Date().getFullYear() - 5, max: new Date().getFullYear() })
   };
+  storeCarData(generatedCarData).catch(console.error);
 
   return generatedCarData;
 };
@@ -42,6 +45,7 @@ export const generateLamborghiniData = (): CarsData => {
     price: faker.number.int({ min: 100000, max: 500000 }),
     dateAdded: faker.number.int({ min: new Date().getFullYear() - 5, max: new Date().getFullYear() })
   };
+  storeCarData(generatedCarData).catch(console.error);
 
   return generatedCarData;
 };
@@ -57,6 +61,7 @@ export const generateBugattiData = (): CarsData => {
     price: faker.number.int({ min: 1000000, max: 3000000 }),
     dateAdded: faker.number.int({ min: new Date().getFullYear() - 5, max: new Date().getFullYear() })
   };
+  storeCarData(generatedCarData).catch(console.error);
 
   return generatedCarData;
 };

@@ -62,4 +62,34 @@ export const generateLondonWeatherDailyData = () => {
     // Return weather data
     return generatedWeatherDailyData;
 };
+export const generateDublinWeatherDailyData = () => {
+    // Generate random weather data
+    const generatedWeatherDailyData = {
+        dayOne: 12,
+        dayTwo: 9,
+        dayThree: 2,
+    };
+    // Return weather data
+    return generatedWeatherDailyData;
+};
+export const generateNigeriaWeatherDailyData = () => {
+    // Generate random weather data
+    const generatedWeatherDailyData = {
+        dayOne: 37,
+        dayTwo: 30,
+        dayThree: 33,
+    };
+    // Return weather data
+    return generatedWeatherDailyData;
+};
+export const generateFranceWeatherDailyData = () => {
+    // Generate random weather data
+    const generatedWeatherDailyData = {
+        dayOne: 10,
+        dayTwo: 16,
+        dayThree: 12,
+    };
+    // Return weather data
+    return generatedWeatherDailyData;
+};
 //# sourceMappingURL=weatherService.js.map

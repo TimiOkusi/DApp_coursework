@@ -1,4 +1,4 @@
-import { generateDublinWeatherData, generateLondonWeatherData, generateNigeriaWeatherData, generateFranceWeatherData, generateLondonWeatherDailyData, } from "../services/weatherService.js";
+import { generateDublinWeatherData, generateLondonWeatherData, generateNigeriaWeatherData, generateFranceWeatherData, generateLondonWeatherDailyData, generateDublinWeatherDailyData, generateNigeriaWeatherDailyData, generateFranceWeatherDailyData } from "../services/weatherService.js";
 /**
  * Gets the weather data for a city
  * @param req the request object
@@ -18,12 +18,15 @@ export const getWeatherData = async (req, res) => {
             finalWeatherData = generateLondonWeatherData();
         }
         else if (city === "dublin") {
+            console.log(generateDublinWeatherData());
             finalWeatherData = generateDublinWeatherData();
         }
         else if (city === "nigeria") {
+            console.log(generateNigeriaWeatherData());
             finalWeatherData = generateNigeriaWeatherData();
         }
         else if (city === "france") {
+            console.log(generateFranceWeatherData());
             finalWeatherData = generateFranceWeatherData();
         }
         else {
@@ -50,6 +53,18 @@ export const getWeatherDailyData = async (req, res) => {
         if (city === "london") {
             console.log(generateLondonWeatherDailyData());
             finalWeatherDailyData = generateLondonWeatherDailyData();
+        }
+        else if (city === "dublin") {
+            console.log(generateDublinWeatherDailyData());
+            finalWeatherDailyData = generateDublinWeatherDailyData();
+        }
+        else if (city === "nigeria") {
+            console.log(generateNigeriaWeatherDailyData());
+            finalWeatherDailyData = generateNigeriaWeatherDailyData();
+        }
+        else if (city === "france") {
+            console.log(generateFranceWeatherDailyData());
+            finalWeatherDailyData = generateFranceWeatherDailyData();
         }
         else {
             // If the city is not london or dublin, we will throw an error

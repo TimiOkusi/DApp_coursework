@@ -5,6 +5,9 @@ import {
   generateNigeriaWeatherData,
   generateFranceWeatherData,
   generateLondonWeatherDailyData,
+  generateDublinWeatherDailyData,
+  generateNigeriaWeatherDailyData,
+  generateFranceWeatherDailyData
 } from "../services/weatherService.js";
 
 /**
@@ -27,10 +30,13 @@ export const getWeatherData = async (req: Request, res: Response) => {
       console.log(generateLondonWeatherData());
       finalWeatherData = generateLondonWeatherData();
     } else if (city === "dublin") {
+      console.log(generateDublinWeatherData());
       finalWeatherData = generateDublinWeatherData();
     } else if (city === "nigeria") {
+      console.log(generateNigeriaWeatherData());
       finalWeatherData = generateNigeriaWeatherData();
     } else if (city === "france") {
+      console.log(generateFranceWeatherData());
       finalWeatherData = generateFranceWeatherData();
     } else {
       // If the city is not london or dublin, we will throw an error
@@ -59,6 +65,15 @@ export const getWeatherDailyData = async (req: Request, res: Response) => {
     if (city === "london") {
       console.log(generateLondonWeatherDailyData());
       finalWeatherDailyData = generateLondonWeatherDailyData();
+    } else if (city === "dublin") {
+      console.log(generateDublinWeatherDailyData());
+      finalWeatherDailyData = generateDublinWeatherDailyData();
+    } else if (city === "nigeria") {
+      console.log(generateNigeriaWeatherDailyData());
+      finalWeatherDailyData = generateNigeriaWeatherDailyData();
+    } else if (city === "france") {
+      console.log(generateFranceWeatherDailyData());
+      finalWeatherDailyData = generateFranceWeatherDailyData();
     } else {
       // If the city is not london or dublin, we will throw an error
       res.status(404).send("City not found");

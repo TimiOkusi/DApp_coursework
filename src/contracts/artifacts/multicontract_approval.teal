@@ -1,0 +1,47 @@
+#pragma version 3
+txn ApplicationID
+int 0
+==
+bnz main_l8
+txn OnCompletion
+int NoOp
+==
+bnz main_l3
+err
+main_l3:
+txna ApplicationArgs 0
+byte "addWeather"
+==
+bnz main_l7
+txna ApplicationArgs 0
+byte "addCar"
+==
+bnz main_l6
+err
+main_l6:
+byte "car_count"
+byte "car_count"
+app_global_get
+int 1
++
+app_global_put
+int 1
+return
+main_l7:
+byte "weather_count"
+byte "weather_count"
+app_global_get
+int 1
++
+app_global_put
+int 1
+return
+main_l8:
+byte "weather_count"
+int 0
+app_global_put
+byte "car_count"
+int 0
+app_global_put
+int 1
+return

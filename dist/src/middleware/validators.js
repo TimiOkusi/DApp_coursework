@@ -19,7 +19,7 @@ export const validateCityName = param("city")
 export const validateCarName = param("manufacturer")
     // We will use the isString method to check if the city param is a string
     .isString()
-    // We will use the isIn method to check if the city param is either london or dublin
+    // We will use the isIn method to check if the city param is either bmw, toyota, lamborghini or bugatti
     .isIn(["bmw", "toyota", "lamborghini", "bugatti"])
     // We will use the withMessage method to set a custom error message
     .withMessage("Car must be either bmw, toyota, lamborghini or bugatti");
